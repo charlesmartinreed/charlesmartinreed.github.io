@@ -16,34 +16,55 @@
     <title>Charles' GitHub... Hub</title>
   </head>
   <body>
-    <h1>Charles Martin Reed</h1>
-    <h3>👋🏿 Check out some of my handiwork.</h3>
-    <div class="project-container">
-      <div class="project-card">
-        <figure>
-          <img src="./images/min-viable-gif.gif" alt="" />
-        </figure>
-        <figcaption>My personal blog</figcaption>
-        <a href="https://minimum-viable.vercel.app/" target="_blank"
-          >Minumum Viable</a
-        >
+    <div class="project-modal visible">
+      <div class="image-div">
+        <img
+          src="./images/min-viable-gif.gif"
+          alt=""
+          title="Click for more details"
+        />
+      </div>
+      <div class="description-div">
+        <h3>Minimum Viable</h3>
+        <p>
+          My personal site, built in Next.js with an eye toward minimalism in
+          design and coding practices. With this project, I set a goal to use as
+          few packages as possible and challenged myself to implement common
+          utility modules on my own.
+        </p>
+        <a href="https://minimum-viable.vercel.app/">VISIT</a>
       </div>
     </div>
-    <footer>
-      <div>
-        <a href="mailto:charliesoandso@protonmail.com">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
-        <a href="https://twitter.com/charlieisamood" target="_blank">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://instagram.com/supalatecharlie" target="_blank">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
+
+    <div class="page-container">
+      <h1>Charles Martin Reed</h1>
+      <h3>👋🏿 Check out some of my handiwork.</h3>
+      <div class="project-container">
+        <div class="project-card" data-project-name="minimum-viable">
+          <figure>
+            <img
+              src="./images/min-viable-gif.gif"
+              alt=""
+              title="Click for more details"
+            />
+          </figure>
+          <figcaption>My personal blog</figcaption>
+          <a>Minumum Viable</a>
+        </div>
       </div>
-      <div>
-        <p>&copy; 2022</p>
-      </div>
-    </footer>
+      <footer>
+        <div>
+          <a
+            href="mailto:charliesoandso@protonmail.com"
+            title="Need a site of your own? Contact me."
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+        <div>
+          <p>&copy; 2022</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

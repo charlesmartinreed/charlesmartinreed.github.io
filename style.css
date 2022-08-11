@@ -12,19 +12,23 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 
+  /* max-width: 1100px; */
+  background-color: #ecd9ba;
+  color: #915f5f;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page-container {
   /* width: 1200px; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-x: hidden;
 
   /* padding: 2rem; */
-  background-color: #ecd9ba;
-  color: #915f5f;
-  position: relative;
 }
 
 h1,
@@ -37,15 +41,102 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  color: #333;
 }
 
 h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 300;
 }
 
-figure img {
+.project-modal {
+  height: 600px;
+  width: 70%;
+  background-color: rgba(248, 246, 237, 1);
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  border-radius: 12px;
+  box-shadow: 0px 8px 26px rgba(33, 19, 19, 0.5);
+
+  transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(0);
+
+  display: flex;
+  flex-direction: row;
+}
+
+.project-modal.visible {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.project-modal > div {
+  flex: 1 50%;
+}
+
+.project-modal .image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.project-modal .description-div {
+  /* max-height: 100%; */
+  /* max-width: 100%; */
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* margin: 20px; */
+  /* height: 70%; */
+  padding: 20px;
+  text-align: center;
+}
+
+.project-modal .description-div h3 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-modal .description-div p {
+  font-size: 18px;
+  line-height: 2rem;
+  margin: 12px 0;
+  /* padding: 22px 0 72px; */
+}
+
+.project-modal .description-div a {
+  text-decoration: none;
+  color: #fff;
+  height: 50px;
+  width: 40%;
+  background-color: #3487e1;
+  text-align: center;
+  letter-spacing: 1px;
+
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 1rem 0;
+
+  transition: all 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.project-modal .description-div a:hover {
+  background-color: #092b9c;
+}
+
+.project-card figure img {
+  cursor: pointer;
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -60,12 +151,12 @@ figcaption {
 }
 
 .project-container {
-  margin: 2rem;
+  /* margin: 2rem; */
   padding: 2rem;
   /* background-color: rgba(222, 193, 155, 0.7); */
   /* box-shadow: 0px 8px 12px rgba(222, 193, 155, 0.6); */
   /* border-radius: 8px; */
-  min-width: 900px;
+  /* min-width: 900px; */
   grid-template-columns: repeat(auto-fit, 300px);
 
   display: grid;
@@ -77,12 +168,12 @@ figcaption {
 .project-card a,
 footer a {
   text-decoration: none;
-  color: #666;
+  color: #555;
   /* color: #3487e1; */
   font-size: 16px;
   font-weight: 500;
 
-  transition: all 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: all 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .project-card a:hover,
@@ -100,6 +191,7 @@ footer a:hover {
 
   padding: 1rem;
   border-radius: 12px;
+  border: 1px solid #915f5f;
 }
 
 footer {
@@ -107,7 +199,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  min-width: 100%;
   /* background-color: #333; */
   padding: 1em;
   color: #915f5f;
@@ -122,14 +214,13 @@ footer {
 
 footer a {
   font-size: 34px;
-  color: #543333;
   padding: 12px;
 }
 
 footer p {
-  font-size: 16px;
+  font-size: 12px;
   padding: 6px;
-  color: #222;
+  color: #555;
 }
 
 footer > * {
@@ -141,14 +232,14 @@ footer > * {
     min-width: 600px;
   }
 
-  h1 {
+  /* h1 {
     font-size: 3rem;
   }
 
   h3 {
     font-size: 1.4rem;
     font-weight: 400;
-  }
+  } */
 }
 
 @media screen and (max-width: 800px) {
@@ -156,7 +247,42 @@ footer > * {
     min-width: 300px;
   }
 
-  h1 {
+  /* h1 {
     font-size: 2.5rem;
+  } */
+}
+
+@media screen and (max-width: 875px) {
+  .project-modal {
+    flex-direction: column;
+  }
+
+  .project-modal > div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .project-modal {
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  .project-modal .description-div h3 {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .project-modal .description-div p {
+    font-size: 14px;
+    line-height: 1.3rem;
+    /* margin: 4px; */
+  }
+
+  .project-modal .description-div a {
+    font-size: 12px;
+    height: 40px;
+    padding: 14px;
   }
 }
