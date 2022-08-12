@@ -19,6 +19,27 @@ body {
   overflow-x: hidden;
 }
 
+#fade-div {
+  z-index: 1;
+
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ecd9ba;
+  filter: grayscale(1);
+  opacity: 0.8;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+}
+
+#fade-div.faded {
+  visibility: visible;
+}
+
 .page-container {
   /* width: 1200px; */
   display: flex;
