@@ -13,21 +13,32 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
     <title>Charles' GitHub... Hub</title>
   </head>
   <body>
-    <div class="project-modal visible">
+    <div
+      id="project-modal"
+      class="project-modal"
+      data-project-name="minimum-viable"
+    >
+      <button
+        id="project-modal-close-btn"
+        class="project-modal-close-btn"
+      ></button>
       <div class="image-div">
         <img
+          class="modal-img"
           src="./images/min-viable-gif.gif"
           alt=""
           title="Click for more details"
+          onclick="onclick()"
         />
       </div>
       <div class="description-div">
         <h3>Minimum Viable</h3>
         <p>
-          My personal site, built in Next.js with an eye toward minimalism in
+          My personal site, built in Next.js, with an eye toward minimalism in
           design and coding practices. With this project, I set a goal to use as
           few packages as possible and challenged myself to implement common
           utility modules on my own.

@@ -53,7 +53,7 @@ h3 {
 }
 
 .project-modal {
-  height: 600px;
+  min-height: 600px;
   width: 70%;
   background-color: rgba(248, 246, 237, 1);
   z-index: 999;
@@ -70,6 +70,39 @@ h3 {
 
   display: flex;
   flex-direction: row;
+}
+
+.project-modal .project-modal-close-btn {
+  position: fixed;
+  right: -20px;
+  top: -20px;
+  height: 60px;
+  width: 60px;
+  border: 0;
+  background-color: rgba(248, 246, 237, 1);
+  box-shadow: 0px 8px 26px rgba(33, 19, 19, 0.5);
+
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.project-modal .project-modal-close-btn::before,
+.project-modal .project-modal-close-btn::after {
+  cursor: pointer;
+  position: absolute;
+  left: 27px;
+  top: 15px;
+  height: 30px;
+  width: 6px;
+  content: " ";
+  background-color: #333;
+}
+
+.project-modal .project-modal-close-btn::after {
+  transform: rotate(-45deg);
+}
+.project-modal .project-modal-close-btn::before {
+  transform: rotate(45deg);
 }
 
 .project-modal.visible {
@@ -93,7 +126,7 @@ h3 {
   color: #222;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   /* margin: 20px; */
   /* height: 70%; */
@@ -136,7 +169,6 @@ h3 {
 }
 
 .project-card figure img {
-  cursor: pointer;
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -182,6 +214,7 @@ footer a:hover {
 }
 
 .project-card {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -259,6 +292,10 @@ footer > * {
 
   .project-modal > div {
     width: 100%;
+    /* height: 50%; */
+  }
+
+  .project-modal .description-div {
   }
 }
 
@@ -284,5 +321,22 @@ footer > * {
     font-size: 12px;
     height: 40px;
     padding: 14px;
+  }
+
+  .project-modal .project-modal-close-btn {
+    top: 97%;
+    left: 45%;
+    height: 40px;
+    width: 40px;
+  }
+
+  .project-modal .project-modal-close-btn::before,
+  .project-modal .project-modal-close-btn::after {
+    left: 17px;
+    top: 10px;
+    height: 20px;
+    width: 4px;
+    content: " ";
+    background-color: #333;
   }
 }
