@@ -13,9 +13,17 @@ body {
     sans-serif;
 
   /* max-width: 1100px; */
-  background-color: #ecd9ba;
-  color: #915f5f;
-  position: relative;
+
+  background: rgb(165, 225, 166);
+  background: radial-gradient(
+    circle,
+    rgba(165, 255, 166, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  /* color: #915f5f; */
+  /* color: #c07d9a; */
+  color: #eee;
+  overflow: hidden;
 }
 
 #fade-div {
@@ -51,6 +59,8 @@ body {
   min-height: 100vh;
   padding-bottom: 3em;
   /* padding: 2rem; */
+
+  position: relative;
 }
 
 h1,
@@ -69,7 +79,7 @@ h1 {
   font-size: 48px;
   font-weight: 500;
   letter-spacing: -1.5px;
-  color: #333;
+  /* color: #333; */
 }
 
 h1 span {
@@ -84,7 +94,7 @@ h3 {
 .project-modal {
   min-height: 600px;
   width: 70%;
-  background-color: rgba(248, 246, 237, 1);
+  background-color: rgba(219, 219, 219, 1);
   z-index: 999;
   position: absolute;
   top: 50%;
@@ -112,7 +122,8 @@ h3 {
   height: 60px;
   width: 60px;
   border: 0;
-  background-color: rgba(248, 246, 237, 1);
+  background-color: rgba(219, 219, 219, 1);
+
   box-shadow: 0px 8px 26px rgba(33, 19, 19, 0.5);
 
   border-radius: 50%;
@@ -128,7 +139,7 @@ h3 {
   height: 30px;
   width: 6px;
   content: " ";
-  background-color: #333;
+  background-color: #444;
 }
 
 .project-modal .project-modal-close-btn::after {
@@ -186,10 +197,12 @@ body .project-modal.visible {
 
 .project-modal .description-div a {
   text-decoration: none;
-  color: #fff;
+
   height: 50px;
   width: 40%;
-  background-color: #3487e1;
+  background-color: #0266bb;
+  color: rgba(219, 219, 219, 1);
+
   text-align: center;
   letter-spacing: 1px;
 
@@ -198,11 +211,12 @@ body .project-modal.visible {
   border-radius: 3px;
   padding: 1rem 0;
 
-  transition: all 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: all 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .project-modal .description-div a:hover {
-  background-color: #092b9c;
+  background-color: #915f5f;
+  background-color: #1582e1;
 }
 
 .project-card figure img {
@@ -237,8 +251,9 @@ figcaption {
 .project-card a,
 footer a {
   text-decoration: none;
-  color: #555;
-  /* color: #3487e1; */
+  color: #794949;
+  color: #0266bb;
+
   font-size: 16px;
   font-weight: 500;
 
@@ -247,7 +262,8 @@ footer a {
 
 .project-card a:hover,
 footer a:hover {
-  color: #000;
+  color: #915f5f;
+  color: #1582e1;
 }
 
 .project-card {
@@ -256,24 +272,33 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ecd9ba;
-  box-shadow: 0px 8px 26px rgba(145, 95, 95, 0.5);
+  /* background-color: rgba(194, 233, 191, 0.8); */
+  /* background-color: rgba(255, 255, 255, 0.6); */
+  box-shadow: inset 0 0 calc(250px + 1rem) rgba(0, 0, 0, 0.2);
+
+  /* backdrop-filter: blur(10px); */
+  /* max-width: calc(250px + 1rem); */
+  /* max-height: calc(250px + 1rem); */
+  /* --webkit-backdrop-filter: blur(10px); */
 
   padding: 1rem;
-  border-radius: 12px;
-  border: 1px solid #915f5f;
+  border-radius: 8px;
+
+  /* background-color: inherit; */
+  /* border: 1px solid #915f5f; */
 }
 
 footer {
   position: absolute;
-  bottom: -2.5%;
+  bottom: 0;
   left: 0;
   right: 0;
   min-width: 100%;
+  height: 40px;
   /* height: 100px; */
   /* background-color: #333; */
   padding: 1em;
-  color: #915f5f;
+  /* color: #333; */
   font-weight: 800;
 
   /* display: flex; */
@@ -291,7 +316,6 @@ footer a {
 footer p {
   font-size: 12px;
   padding: 6px;
-  color: #555;
 }
 
 footer > * {
@@ -368,6 +392,6 @@ footer > * {
     height: 20px;
     width: 4px;
     content: " ";
-    background-color: #333;
+    background-color: #222;
   }
 }
