@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap");
 
 * {
   margin: 0;
@@ -12,17 +12,14 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 
-  /* max-width: 1100px; */
-
   background: rgb(165, 225, 166);
   background: radial-gradient(
     circle,
     rgba(165, 255, 166, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
-  /* color: #915f5f; */
-  /* color: #c07d9a; */
-  color: #eee;
+
+  color: #555;
   overflow: hidden;
 }
 
@@ -50,7 +47,6 @@ body {
 }
 
 .page-container {
-  /* width: 1200px; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -58,7 +54,6 @@ body {
   align-items: center;
   min-height: 100vh;
   padding-bottom: 3em;
-  /* padding: 2rem; */
 
   position: relative;
 }
@@ -75,26 +70,21 @@ h6 {
   text-align: center;
 }
 
-h1 {
+.page-title-header {
+  font-family: "Bungee Inline", cursive;
+  color: #d7f5d3;
   font-size: 48px;
-  font-weight: 500;
-  letter-spacing: -1.5px;
-  /* color: #333; */
 }
 
-h1 span {
-  font-weight: 800;
-}
-
-h3 {
-  font-size: 22px;
-  font-weight: 400;
+.page-container h3 {
+  font-weight: 300;
 }
 
 .project-modal {
   min-height: 600px;
   width: 70%;
   background-color: rgba(219, 219, 219, 1);
+
   z-index: 999;
   position: absolute;
   top: 50%;
@@ -122,7 +112,6 @@ h3 {
   height: 60px;
   width: 60px;
   border: 0;
-  background-color: rgba(219, 219, 219, 1);
 
   box-shadow: 0px 8px 26px rgba(33, 19, 19, 0.5);
 
@@ -139,7 +128,7 @@ h3 {
   height: 30px;
   width: 6px;
   content: " ";
-  background-color: #444;
+  background-color: #222;
 }
 
 .project-modal .project-modal-close-btn::after {
@@ -151,10 +140,6 @@ h3 {
 
 .project-modal.visible {
   transform: translate(-50%, -50%) scale(1);
-}
-
-body .project-modal.visible {
-  /* overflow: hidden; */
 }
 
 .project-modal > div {
@@ -169,53 +154,52 @@ body .project-modal.visible {
 }
 
 .project-modal .description-div {
-  /* max-height: 100%; */
-  /* max-width: 100%; */
   color: #222;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  /* margin: 20px; */
-  /* height: 70%; */
   padding: 20px;
   text-align: center;
 }
 
 .project-modal .description-div h3 {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 36px;
+  /* font-weight: 400; */
+
+  font-family: "Bungee Inline", cursive;
+  /* color: #0266bb; */
+
+  /* text-transform: uppercase; */
 }
 
 .project-modal .description-div p {
-  font-size: 18px;
-  line-height: 2rem;
+  font-size: 17px;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1.8rem;
   margin: 12px 0;
-  /* padding: 22px 0 72px; */
 }
 
 .project-modal .description-div a {
   text-decoration: none;
 
-  height: 50px;
-  width: 40%;
+  width: 35%;
   background-color: #0266bb;
   color: rgba(219, 219, 219, 1);
 
   text-align: center;
   letter-spacing: 1px;
 
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 800;
   border-radius: 3px;
-  padding: 1rem 0;
+  padding: 14px 0;
 
   transition: all 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .project-modal .description-div a:hover {
-  background-color: #915f5f;
   background-color: #1582e1;
 }
 
@@ -234,12 +218,7 @@ figcaption {
 }
 
 .project-container {
-  /* margin: 2rem; */
   padding: 2rem;
-  /* background-color: rgba(222, 193, 155, 0.7); */
-  /* box-shadow: 0px 8px 12px rgba(222, 193, 155, 0.6); */
-  /* border-radius: 8px; */
-  /* min-width: 900px; */
   grid-template-columns: repeat(auto-fit, 300px);
 
   display: grid;
@@ -251,7 +230,6 @@ figcaption {
 .project-card a,
 footer a {
   text-decoration: none;
-  color: #794949;
   color: #0266bb;
 
   font-size: 16px;
@@ -262,7 +240,6 @@ footer a {
 
 .project-card a:hover,
 footer a:hover {
-  color: #915f5f;
   color: #1582e1;
 }
 
@@ -272,20 +249,10 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: rgba(194, 233, 191, 0.8); */
-  /* background-color: rgba(255, 255, 255, 0.6); */
   box-shadow: inset 0 0 calc(250px + 1rem) rgba(0, 0, 0, 0.2);
-
-  /* backdrop-filter: blur(10px); */
-  /* max-width: calc(250px + 1rem); */
-  /* max-height: calc(250px + 1rem); */
-  /* --webkit-backdrop-filter: blur(10px); */
 
   padding: 1rem;
   border-radius: 8px;
-
-  /* background-color: inherit; */
-  /* border: 1px solid #915f5f; */
 }
 
 footer {
@@ -295,13 +262,9 @@ footer {
   right: 0;
   min-width: 100%;
   height: 40px;
-  /* height: 100px; */
-  /* background-color: #333; */
   padding: 1em;
-  /* color: #333; */
   font-weight: 800;
 
-  /* display: flex; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -332,10 +295,6 @@ footer > * {
   .project-container {
     min-width: 300px;
   }
-
-  /* h1 {
-    font-size: 2.5rem;
-  } */
 }
 
 @media screen and (max-width: 975px) {
@@ -345,7 +304,6 @@ footer > * {
 
   .project-modal > div {
     width: 100%;
-    /* height: 50%; */
   }
 
   .project-modal .image-div img {
@@ -354,7 +312,11 @@ footer > * {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
+  .page-title-header {
+    line-height: 3rem;
+  }
+
   .project-modal {
     width: 90%;
     height: 90%;
@@ -369,7 +331,6 @@ footer > * {
   .project-modal .description-div p {
     font-size: 14px;
     line-height: 1.3rem;
-    /* margin: 4px; */
   }
 
   .project-modal .description-div a {
