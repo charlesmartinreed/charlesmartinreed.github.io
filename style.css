@@ -20,6 +20,7 @@ body {
   );
 
   color: #555;
+  position: relative;
   overflow: hidden;
 }
 
@@ -49,13 +50,10 @@ body {
 .page-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding-bottom: 3em;
-
-  position: relative;
+  min-height: calc(100vh - 40px);
 }
 
 h1,
@@ -228,7 +226,7 @@ figcaption {
 }
 
 .project-card a,
-footer a {
+.contact-container a {
   text-decoration: none;
   color: #0266bb;
 
@@ -239,7 +237,7 @@ footer a {
 }
 
 .project-card a:hover,
-footer a:hover {
+.contact-container a:hover {
   color: #1582e1;
 }
 
@@ -249,40 +247,66 @@ footer a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 calc(250px + 1rem) rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 calc(250px + 1rem) rgba(0, 0, 0, 0.2),
+    2px 4px 16px rgba(0, 0, 0, 0.2);
 
   padding: 1rem;
   border-radius: 8px;
 }
 
-footer {
+.contact-container {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-width: 100%;
+  top: 0px;
+  right: 0px;
+  width: 200px;
   height: 40px;
-  padding: 1em;
   font-weight: 800;
 
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
-footer a {
-  font-size: 34px;
-  padding: 12px;
+.contact-container a {
+  font-size: 48px;
+  position: absolute;
+
+  top: 0;
+  right: 10px;
+
+  z-index: 12;
+  transform: scale(0.9);
 }
 
-footer p {
+.contact-container a:hover,
+.contact-container a:active,
+.contact-container a:focus {
+  transform: scale(1.7) rotate(20deg);
+}
+
+.contact-container:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  /* z-index: -1; */
+  background: rgba(165, 255, 166, 0.5);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+
+  transform-origin: top left;
+  -ms-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  transform: skew(69deg, 0deg);
+  -ms-transform: skew(69deg, 0deg);
+  -webkit-transform: skew(69deg, 0deg);
+}
+
+.contact-container p {
   font-size: 12px;
   padding: 6px;
-}
-
-footer > * {
-  margin: 0 8px;
 }
 
 @media screen and (max-width: 1125px) {
@@ -315,6 +339,18 @@ footer > * {
 @media screen and (max-width: 425px) {
   .page-title-header {
     line-height: 3rem;
+  }
+
+  .contact-container a {
+    font-size: 24px;
+    top: 0;
+    right: 5px;
+  }
+
+  .contact-container a:hover,
+  .contact-container a:active,
+  .contact-container a:focus {
+    transform: scale(1.75) rotate(20deg);
   }
 
   .project-modal {
