@@ -341,10 +341,14 @@ figcaption {
     line-height: 3rem;
   }
 
+  .contact-container {
+    width: 125px;
+  }
+
   .contact-container a {
-    font-size: 24px;
+    font-size: 30px;
     top: 0;
-    right: 5px;
+    right: 10px;
   }
 
   .contact-container a:hover,
