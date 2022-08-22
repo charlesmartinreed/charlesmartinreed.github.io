@@ -22,10 +22,11 @@ body {
   color: #555;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 #fade-div {
-  z-index: 1;
+  z-index: 13;
 
   min-width: 100%;
   min-height: 102.5%;
@@ -71,6 +72,8 @@ h6 {
 .page-title-header {
   font-family: "Bungee Inline", cursive;
   color: #d7f5d3;
+  color: rgb(186, 247, 187, 1);
+
   font-size: 48px;
 }
 
@@ -346,15 +349,15 @@ figcaption {
   }
 
   .contact-container a {
-    font-size: 30px;
-    top: 0;
-    right: 10px;
+    font-size: 22px;
+    top: 6px;
+    right: 6px;
   }
 
   .contact-container a:hover,
   .contact-container a:active,
   .contact-container a:focus {
-    transform: scale(1.75) rotate(20deg);
+    transform: scale(2.5) rotate(20deg);
   }
 
   .project-modal {
