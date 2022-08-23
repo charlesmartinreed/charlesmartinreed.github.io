@@ -18,32 +18,28 @@
   </head>
   <body>
     <div id="fade-div"></div>
-    <div id="contact-modal" class="contact-modal visible">
+    <div id="contact-modal" class="contact-modal">
       <div class="photo-pane">
         <!-- <h1>image goes here</h1> -->
       </div>
       <div class="details-pane">
-        <p><span>Location</span>Dallas, Texas</p>
-        <p><span>Preference</span>Language-fluid</p>
+        <p class="details-pane-header">Charles Martin Reed</p>
+        <p>Capricorn</p>
+        <p>Dallas</p>
+        <p>Proficient in <span>HTML, CSS, JavaScript, Swift & Python</span></p>
+        <p>Likes <span>long walks, round dogs, IDEs, JavaScript.</span></p>
         <p>
-          <span>Likes</span>Lorem ipsum, dolor sit amet, consectetur adipisicing
-          elit.
-        </p>
-        <p>
-          <span>Dislikes</span> Lorem ipsum, dolor sit amet, consectetur
-          adipisicing elit.
+          Dislikes
+          <span
+            >caramel popcorn, cinematic universes, IDEs made by Apple,
+            JavaScript.</span
+          >
         </p>
       </div>
       <div class="contact-info-pane">
-        <a href="https://www.github.com/charlesmartinreed"
-          >github.com/charlesmartinreed</a
-        >
-        <a href="https://minimum-viable.vercel.app/"
-          >minimum-viable.vercel.app</a
-        >
-        <a href="mailto:charliesoandso@protonmail.com"
-          >charliesoandso@protonmail.com</a
-        >
+        <a href="https://www.github.com/charlesmartinreed">My Github</a>
+        <a href="https://minimum-viable.vercel.app/">My Personal Site</a>
+        <a href="mailto:charliesoandso@protonmail.com">My Email</a>
       </div>
     </div>
     <div
@@ -68,8 +64,8 @@
         <p>
           My personal site, built in Next.js, with an eye toward minimalism in
           design and coding practices. With this project, I set a goal to use as
-          few packages as possible and challenged myself to implement common
-          utility modules on my own.
+          few packages as possible and challenged myself to replicate common
+          utility modules using my own code.
         </p>
         <a href="https://minimum-viable.vercel.app/" target="_blank">VISIT</a>
       </div>
@@ -94,7 +90,8 @@
     </div>
     <div class="contact-container">
       <a
-        href="mailto:charliesoandso@protonmail.com"
+        href="#!"
+        id="contact-pane-btn"
         title="Need a site of your own? Contact me."
       >
         <i class="fa-solid fa-address-book"></i>
