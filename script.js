@@ -30,6 +30,8 @@ projectCards.forEach((projectCard) => {
 
 function openModal(card) {
   // disable the contact modal button to prevent displaying atop this modal
+  contactModalBtn.disabled = true;
+
   const [modal] = Array.from(modals).filter(
     (modal) =>
       modal.getAttribute("data-project-name") ===
@@ -44,4 +46,5 @@ function closeModal(modal) {
   modal.classList.remove("visible");
   fadeDiv.classList.remove("faded");
   fadeDiv.removeEventListener("click", null);
+  contactModalBtn.disabled = false;
 }

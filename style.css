@@ -221,8 +221,7 @@ figcaption {
   align-items: center;
 }
 
-.project-card a,
-.contact-container a {
+.project-card a {
   text-decoration: none;
   color: #0266bb;
 
@@ -233,7 +232,6 @@ figcaption {
 }
 
 .project-card a:hover,
-.contact-container a:hover,
 .contact-info-pane a:hover {
   color: #1582e1;
 }
@@ -265,20 +263,28 @@ figcaption {
   z-index: 2000;
 }
 
-.contact-container a {
-  font-size: 48px;
+.contact-container button i {
+  cursor: pointer;
+  font-size: 42px;
   position: absolute;
 
-  top: 0;
+  top: 10px;
   right: 10px;
 
   z-index: 12;
   transform: scale(0.9);
+  color: #0266bb;
+
+  transition: all 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-.contact-container a:hover,
-.contact-container a:focus {
-  transform: scale(1.7) rotate(20deg);
+.contact-container button:disabled i {
+  filter: grayscale(0.8);
+}
+
+.contact-container :not(button:disabled) i:hover,
+.contact-container :not(button:disabled) i:focus {
+  transform: scale(1.8) rotate(20deg);
 }
 
 .contact-container:after {
