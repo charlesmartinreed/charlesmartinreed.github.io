@@ -79,7 +79,7 @@ h6 {
 .project-modal {
   min-height: 600px;
   width: 70%;
-  background-color: rgba(219, 219, 219, 1);
+  background-color: rgba(212, 228, 246, 1);
 
   z-index: 999;
   position: absolute;
@@ -322,8 +322,9 @@ figcaption {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
 
-  background-color: rgba(225, 238, 255, 1);
   background-color: rgba(212, 228, 246, 1);
+  color: #222;
+
   box-shadow: 0px 8px 26px rgba(33, 19, 19, 0.5);
   border-radius: 8px;
 
@@ -442,7 +443,13 @@ figcaption {
 }
 
 @media screen and (max-width: 425px) {
+  html,
+  body {
+    overflow-y: scroll;
+  }
+
   .page-title-header {
+    font-size: 42px;
     line-height: 3rem;
   }
 
@@ -508,9 +515,10 @@ figcaption {
   }
 
   .project-modal {
+    top: 51%;
     width: 90%;
     height: 90%;
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -51%) scale(0);
   }
 
   .project-modal .description-div h3 {
