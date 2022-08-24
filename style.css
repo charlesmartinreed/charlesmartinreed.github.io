@@ -175,7 +175,7 @@ h6 {
   margin: 12px 0;
 }
 
-.project-modal .description-div a {
+/* .project-modal .description-div a {
   text-decoration: none;
 
   width: 35%;
@@ -191,11 +191,11 @@ h6 {
   padding: 14px 0;
 
   transition: all 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
+} */
 
-.project-modal .description-div a:hover {
+/* .project-modal .description-div a:hover {
   background-color: #1582e1;
-}
+} */
 
 .project-card figure img {
   width: 250px;
@@ -221,7 +221,7 @@ figcaption {
   align-items: center;
 }
 
-.project-card a {
+/* .project-card a {
   text-decoration: none;
   color: #0266bb;
 
@@ -229,10 +229,11 @@ figcaption {
   font-weight: 500;
 
   transition: all 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
+} */
 
 .project-card a:hover,
-.contact-info-pane a:hover {
+.contact-info-pane a:hover,
+.project-modal .description-div a:hover {
   color: #1582e1;
 }
 
@@ -393,21 +394,32 @@ figcaption {
   transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-.contact-info-pane a {
+.project-card a,
+.contact-info-pane a,
+.project-modal .description-div a {
   text-decoration: none;
   color: #0266bb;
   font-size: 0.95rem;
   font-weight: 500;
+
+  transition: all 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  text-transform: uppercase;
 }
 
+.project-card a:hover::after,
+.project-card a:focus::after,
 .contact-info-pane a:hover::after,
-.contact-info-pane a:focus::after {
+.contact-info-pane a:focus::after,
+.project-modal .description-div a:hover::after,
+.project-modal .description-div a:focus::after {
   transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
   width: 100%;
 }
 
-.contact-info-pane a::after {
+.project-card a::after,
+.contact-info-pane a::after,
+.project-modal .description-div a::after {
   content: "";
   height: 10px;
   width: 0%;
@@ -510,7 +522,9 @@ figcaption {
     grid-row: auto;
   }
 
-  .contact-info-pane a {
+  .project-card a,
+  .contact-info-pane a,
+  .project-modal .description-div a {
     font-size: 0.85rem;
   }
 
@@ -531,11 +545,11 @@ figcaption {
     line-height: 1.3rem;
   }
 
-  .project-modal .description-div a {
+  /* .project-modal .description-div a {
     font-size: 12px;
     height: 40px;
     padding: 14px;
-  }
+  } */
 
   .project-modal .project-modal-close-btn {
     top: 97%;
