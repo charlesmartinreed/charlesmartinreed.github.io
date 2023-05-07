@@ -17,6 +17,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  overflow-x: hidden;
+}
+
+#container__header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fdf5e8;
 }
 
 .container__main {
@@ -24,12 +33,15 @@ body {
   height: 100vh;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0 1.75rem;
+
+  overflow-x: hidden;
 }
 
-.container__sub {
+.container__post__main {
   /* background-color: pink; */
+  margin-bottom: 1.5rem;
 }
 
 h1,
@@ -42,7 +54,7 @@ h6 {
   padding: 2rem 0;
 }
 
-.container__article__lead {
+.container__post__leadin {
   font-family: "Montserrat", sans-serif;
 
   display: flex;
@@ -50,7 +62,7 @@ h6 {
   margin-bottom: 12px;
 }
 
-.container__article__lead .text__timestamp {
+.container__post__leadin .post__timestamp {
   color: #555;
   margin-right: 12px;
   font-size: 13px;
@@ -61,7 +73,7 @@ h6 {
   font-weight: 900;
 }
 
-.text__lead {
+.post__snippet {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8rem;
@@ -76,11 +88,11 @@ a {
   color: dodgerblue;
 }
 
-.link__article {
+.post__link {
   font-size: 18px;
 }
 
-.link__article::after {
+.post__link::after {
   /* position: absolute; */
   display: inline-block;
   content: "➡️";
