@@ -49,7 +49,6 @@ a:visited {
 a:hover,
 a:focus {
   /* transform: scale(1.05); */
-  text-shadow: 1rem 2px 0.75rem var(--post-border-color);
 }
 
 nav {
@@ -117,8 +116,7 @@ nav ul li a {
 }
 
 .container__post__main {
-  border: 2px solid var(--post-border-color);
-  box-shadow: var(--post-box-shadow);
+
   margin-bottom: 1.5rem;
   padding: 1.5rem;
   border-radius: 8px;
