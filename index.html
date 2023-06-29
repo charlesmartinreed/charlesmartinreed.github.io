@@ -20,33 +20,41 @@
   </head>
   <body>
     <div class="container__main">
-      <div id="container__header">
+      <div id="container__main__left">
         <nav>
-          <ul>
-            <li><a href="/index.html">Home</a></li>
-          </ul>
-          <ul>
-            <li>
-              <a href="mailto:charliesoandso@protonmail.com">Contact</a>
-            </li>
-          </ul>
-          <ul>
-            <li><a href="/portfolio.html">Portfolio</a></li>
+          <ul class="nav__list">
+              <label class="toggle__label not-toggled" for="portfolio__item__1">Portfolio Item #1</label>
+              <li class="nav__list__item" id="portfolio__item__1">
+                <a href="#">"{Live Link}"</a>
+                <a href="#">"{Github Link}"</a>
+              </li>
+              <label class="toggle__label not-toggled" for="portfolio__item__2">Portfolio Item #2</label>
+              <li class="nav__list__item" id="portfolio__item__2">
+                <a href="#">"{Live Link}"</a>
+                <a href="#">"{Github Link}"</a>
+              </li>
+              <label class="toggle__label not-toggled" for="portfolio__item__3">Portfolio Item #3</label>
+              <li class="nav__list__item" id="portfolio__item__3">
+                <a href="#">"{Live Link}"</a>
+                <a href="#">"{Github Link}"</a>
+              </li>
+          
           </ul>
         </nav>
       </div>
-      <div class="container__post__main">
+      <div class="container__main__right">
         <div class="container__post__leadin">
-          <a id="post__timestamp" class="post__link" href="" target="_blank">January 1, 2000</a>
+          <p id="post__timestamp" href="" target="_blank">January 1, 2000</p>
           <p class="post__title">Title of Post</p>
+          <p class="post__snippet">
+            Snippet of Post... Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Fugiat consectetur, voluptatum delectus molestias iusto ad
+            pariatur impedit commodi magnam eaque modi soluta suscipit cum,
+            voluptates, temporibus inventore. Ab unde iure quis esse eligendi
+            corrupti commodi.
+          </p>
         </div>
-        <p class="post__snippet">
-          Snippet of Post... Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Fugiat consectetur, voluptatum delectus molestias iusto ad
-          pariatur impedit commodi magnam eaque modi soluta suscipit cum,
-          voluptates, temporibus inventore. Ab unde iure quis esse eligendi
-          corrupti commodi.
-        </p>
+        
       </div>
     </div>
   </body>
