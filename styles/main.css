@@ -59,7 +59,6 @@ a:focus {
 nav {
   width: 100%;
   height: 100%;
-  /* background-color: black; */
 
 
   display: flex;
@@ -91,13 +90,6 @@ nav .nav__contact a:hover, nav .nav__contact a:focus, a:hover, a:focus {
   list-style-type: none;
 }
 
-.nav__list__item a {
-  display: block;
-  font-weight: 400;
-  text-transform: uppercase;
-  /* margin-top: 24px; */
-}
-
 label.toggle__label {
   cursor: pointer;
 
@@ -105,26 +97,14 @@ label.toggle__label {
   letter-spacing: 0.75px;
 }
 
-label.toggle__label::before {
-  content: "▶";
-  margin-right: 0.5rem;
-  font-size: 0.75em;
-  color: var(--color-lightish-purple);
-}
-
-label.toggle__label.not-toggled + li {
-  display: none;
-}
-
-label.toggle__label.toggled + li {
+label.toggle__label + li {
   display: flex;
   flex-direction: row;
-  margin-left: 1rem;
+
+  margin: 0.25rem;
 }
 
 #container__main__left {
-  height: 100vh;
-
   background-color:peru;
   color: var(--default-page-background-color);
 }
@@ -166,11 +146,7 @@ h4 {
   margin-bottom: 12px;
   padding-left: 12px;
 
-  border-left: 7px solid var(--color-lightish-purple);
-  /* border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
+  border-left: 7px solid var(--post-border-color);
 }
 
 .container__post__leadin #post__timestamp {
@@ -192,4 +168,65 @@ h4 {
 .post__link {
   font-size: 22px;
   margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 400px) {
+  .container__main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 75% 25%;
+    row-gap: 0.5rem;
+  }
+
+  .container__main__right {
+    order: -1;
+  }
+
+  nav {
+    flex-direction: row;
+    padding-left: 1rem;
+  }
+
+  nav h4 {
+    display: none;
+  }
+
+  nav > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: lime; */
+  }
+
+  .nav__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 13px;
+  }
+
+  .nav__list__item {
+    font-size: 14px;
+  }
+
+  nav .nav__contact {
+    height: 100%;
+    width: 40%;
+
+    /* background-color: lime; */
+    font-size: 1.5rem;
+  }
+
+  nav .nav__contact div {
+    /* height: 100%; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+label.toggle__label + li {
+  margin-left: -0.2rem
+}
+  
 }
