@@ -35,10 +35,21 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 a {
   text-decoration: none;
   letter-spacing: 0.55px;
-  color: var(--link-color-unvisited);
+  /* color: var(--link-color-unvisited); */
+  color: var(--color-near-black);
+
+
   font-weight: 500;
 }
 
@@ -208,6 +219,7 @@ h4 {
   .nav__list__item {
     font-size: 14px;
   }
+
 
   nav .nav__contact {
     height: 100%;
