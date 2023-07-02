@@ -9,7 +9,7 @@
 :root {
   --default-font-color: rgb(45, 43, 38);
   --default-page-background-color: rgb(219, 219, 219);
-  --link-color-unvisited: rgb(24, 166, 152);
+  --link-color-unvisited: rgb(36, 122, 114);
   --link-color-visited: rgb(7, 77, 70);
   --post-border-color: rgb(179, 102, 115);
   --post-box-shadow: 3px 4px 0px rgba(255, 192, 203, 0.65);
@@ -35,31 +35,29 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-
 a {
+  color: var(--link-color-unvisited);
   text-decoration: none;
-  letter-spacing: 0.55px;
-  /* color: var(--link-color-unvisited); */
-  color: var(--color-near-black);
-
-
-  font-weight: 500;
 }
 
 a:visited {
   color: var(--link-color-visited);
 }
 
-a:hover,
-a:focus {
-  /* transform: scale(1.05); */
+nav .link__portfolio__item, nav .link__contact__item {
+  font-size: 0.75em;
+  margin: 0 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+nav .link__portfolio__item:hover, nav .link__contact__item:hover, nav .link__portfolio__item:active, nav .link__contact__item:active {
+  /* transform: scale(1.02); */
+  transform: translateY(-1px);
+  filter: grayscale(0.8);
 }
 
 .nav__list {
@@ -85,16 +83,6 @@ nav .nav__contact {
   display: flex;
   justify-content: space-evenly;
   align-items: center;  
-  font-size: 2rem;
-}
-
-nav .nav__contact a, a {
-  transition: all 0.2s ease-in-out;
-}
-
-nav .nav__contact a:hover, nav .nav__contact a:focus, a:hover, a:focus {
-  transform: scale(0.95);
-  filter: sepia(0.8);
 }
 
 .nav__list__item {
@@ -106,6 +94,7 @@ label.toggle__label {
 
   margin-bottom: 0.25rem;
   letter-spacing: 0.75px;
+  font-weight: 700;
 }
 
 label.toggle__label + li {
@@ -221,12 +210,12 @@ h4 {
   }
 
 
+
   nav .nav__contact {
     height: 100%;
     width: 40%;
 
     /* background-color: lime; */
-    font-size: 1.5rem;
   }
 
   nav .nav__contact div {
