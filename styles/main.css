@@ -19,20 +19,94 @@
 
 html,
 body {
-  background: var(--default-page-background-color);
-  color: var(--default-font-color);
+  color: var(--default-page-background-color);
+  background: var(--default-font-color);
 
   /* color: #d2cfcf; */
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  overflow-x: hidden;
+  overflow-x: hidden; */
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav {
+  padding: 2rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+.container__hero {
+  /* background-color: red; */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__portfolio__projects {
+  /* background-color: red; */
+  width: 80%;
+  height: 400px;
+  gap: 12px;
+
+  padding: 0 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.container__portfolio__projects::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio__project__img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project__links, .container__external__urls {
+  /* background-color: purple; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.url__button {
+  /* display: block; */
+  border: 1px solid var(--link-color-unvisited);
+  border-radius: 4px;
+  /* width: 200px; */
+  padding: 0.5rem 1rem;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -57,7 +131,8 @@ nav .link__portfolio__item, nav .link__contact__item {
 nav .link__portfolio__item:hover, nav .link__contact__item:hover, nav .link__portfolio__item:active, nav .link__contact__item:active {
   /* transform: scale(1.02); */
   transform: translateY(-1px);
-  filter: grayscale(0.8);
+  -webkit-filter: grayscale(0.8);
+          filter: grayscale(0.8);
 }
 
 .nav__list {
@@ -124,19 +199,7 @@ label.toggle__label + li {
   border-radius: 8px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-nav {
-  padding: 2rem 0;
-}
 
-h4 {
-  font-size: 1.4rem;
-}
 
 .container__post__leadin {
   font-family: "Montserrat", sans-serif;
