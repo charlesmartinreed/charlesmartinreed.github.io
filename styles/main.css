@@ -6,15 +6,21 @@
   box-sizing: border-box;
 }
 
+/* credit where credit is due 
+https://www.joshwcomeau.com/css/designing-shadows/
+*/
+
 :root {
-  --default-font-color: rgb(45, 43, 38);
+  /* --color-near-black: rgba(11, 11, 11, 0.3); */
+  --default-font-color: rgb(34, 34, 34);
   --default-page-background-color: rgb(219, 219, 219);
-  --link-color-unvisited: rgb(36, 122, 114);
-  --link-color-visited: rgb(7, 77, 70);
-  --post-border-color: rgb(179, 102, 115);
-  --post-box-shadow: 3px 4px 0px rgba(255, 192, 203, 0.65);
-  --color-near-black: rgba(41, 41, 41, 1);
-  --color-lightish-purple: rgba(90, 22, 90, 1);
+  --link-color-visited: rgb(99, 26, 38);
+  --link-color: rgb(80, 33, 41);
+  --card-box-shadow: inset 0 1px 1px hsl(0deg 0% 0% / 0.075),
+  0 2px 2px hsl(0deg 0% 0% / 0.075),
+  0 4px 4px hsl(0deg 0% 0% / 0.075),
+  0 8px 8px hsl(0deg 0% 0% / 0.075),
+  0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
 html,
@@ -73,6 +79,9 @@ h4 {
 
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+
+  /* justify-content: center; */
   align-items: center;
   overflow-x: scroll;
 }
@@ -81,25 +90,51 @@ h4 {
   display: none;
 }
 
+.project__card__body {
+  cursor: pointer;
+
+  border: 1px solid var(--color-near-black);
+  padding: 1rem;
+  border-radius: 8px;
+  /* width: 30%; */
+  height: 300px;
+  min-width: 300px;
+  /* background-color: blue; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: var(--card-box-shadow);
+}
+
 .portfolio__project__img {
-  width: 300px;
-  height: 200px;
+  border-radius: 8px;
+  width: 100%;
+  height: 70%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .project__links, .container__external__urls {
   /* background-color: purple; */
-  width: 100%;
+  /* width: 100%; */
+  display: block;
+  /* width: 100px; */
+  height: 50px;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 }
 
 .url__button {
   /* display: block; */
-  border: 1px solid var(--link-color-unvisited);
+  color: var(--default-page-background-color);
+  background-color: var(--link-color);
   border-radius: 4px;
   /* width: 200px; */
   padding: 0.5rem 1rem;
@@ -107,6 +142,20 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-weight: 200;
+  font-size: 0.7rem;
+
+  box-shadow: var(--card-box-shadow);
+
+  transition: all 0.25s linear;
+}
+
+.url__button:hover, .url__button:focus {
+  transform: scale(1.02) translateY(-5px);
+  background-color: var(--link-color-visited);
 }
 
 a {
