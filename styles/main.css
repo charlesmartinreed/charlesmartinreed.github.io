@@ -117,7 +117,7 @@ h4 {
      object-fit: cover;
 }
 
-.project__links, .container__external__urls {
+.project__links {
   /* background-color: purple; */
   /* width: 100%; */
   display: block;
@@ -156,6 +156,15 @@ h4 {
 .url__button:hover, .url__button:focus {
   transform: scale(1.02) translateY(-5px);
   background-color: var(--link-color-visited);
+}
+
+img.icon__personal__url {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top left;
+     object-position: top left;
 }
 
 a {
