@@ -29,7 +29,7 @@ https://www.joshwcomeau.com/css/designing-shadows/
   0 8px 8px hsl(0deg 0% 0% / 0.075),
   0 16px 16px hsl(0deg 0% 0% / 0.075);
 
-  --icon-text-shadow: text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585, -8px 16px 1px #8b8a89, -9px 18px 1px #8f8e8d, -10px 20px 1px #949392, -11px 22px 1px ;
+  --icon-text-shadow: text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585, -8px 16px 1px #8b8a89, -9px 18px 1px #8f8e8d, -10px 20px 1px #949392, -11px;
 }
 
 html,
@@ -150,6 +150,41 @@ a {
      object-position: top left;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.project__details {
+  /* transform: scale(0); */
+
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  transition: var(--transition-standard);
+}
+
+.project__details .project__details__text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-near-black);
+  font-style: oblique;
+  letter-spacing: 0.0125rem;
+}
+
+.project__details .project__details__icon__container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project__details .project__details__icon__container .project__lang__icon {
+  width: 24px;
+  height: 24px;
 }
 
 .project__links {
