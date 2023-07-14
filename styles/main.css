@@ -29,7 +29,7 @@ https://www.joshwcomeau.com/css/designing-shadows/
   0 8px 8px hsl(0deg 0% 0% / 0.075),
   0 16px 16px hsl(0deg 0% 0% / 0.075);
 
-  --icon-text-shadow: text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px ;
+  --icon-text-shadow: text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272,;
 }
 
 html,
@@ -129,7 +129,7 @@ a {
   
   height: 25px;
   width: 25px;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 800;
   border: none;
   
@@ -137,6 +137,11 @@ a {
   color: rgb(12, 54, 12);
   background-color: rgba(34, 92, 34, 1);
   transition: var(--transition-standard);
+}
+
+.project__card__body .project__info .project__info__btn.info__opened {
+  background: rgb(148, 76, 88);
+  color: var(--link-color);
 }
 
 .project__card__body .project__info .project__info__btn:hover, .project__card__body .project__info .project__info__btn:active {
