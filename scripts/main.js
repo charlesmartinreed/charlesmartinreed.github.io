@@ -20,7 +20,7 @@ infoBtns.forEach((infoBtn) =>
       e.target.textContent = e.target.classList.contains(
         'info__opened'
       )
-        ? 'X'
+        ? '-'
         : '?';
     }, 400);
 
