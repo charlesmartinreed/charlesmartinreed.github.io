@@ -29,7 +29,7 @@ https://www.joshwcomeau.com/css/designing-shadows/
   0 8px 8px hsl(0deg 0% 0% / 0.075),
   0 16px 16px hsl(0deg 0% 0% / 0.075);
 
-  --icon-text-shadow: text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272,;
+  --icon-text-shadow: text-shadow;
 }
 
 html,
@@ -107,6 +107,11 @@ a {
   box-shadow: var(--card-box-shadow);
 }
 
+.project__card__body:hover, .project__card__body:focus {
+  -webkit-animation: 0.15s ease-in-out 2 shake;
+          animation: 0.15s ease-in-out 2 shake;
+}
+
 .project__card__body .project__info {
   height: 50px;
   width: 100%;
@@ -132,6 +137,10 @@ a {
   font-size: 0.8rem;
   font-weight: 800;
   border: none;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-end; */
   
   border-radius: 50%;
   color: rgb(12, 54, 12);
@@ -142,6 +151,7 @@ a {
 .project__card__body .project__info .project__info__btn.info__opened {
   background: rgb(148, 76, 88);
   color: var(--link-color);
+  
 }
 
 .project__card__body .project__info .project__info__btn:hover, .project__card__body .project__info .project__info__btn:active {
@@ -171,6 +181,9 @@ a {
   display: none;
   flex-direction: column;
   gap: 0.5rem;
+
+  background-color: var(--default-page-background-color);
+  color: var(--default-page-background-color);
   /* justify-content: center; */
   /* align-items: center; */
 
@@ -182,6 +195,8 @@ a {
   /* transform: scale(1); */
   opacity: 1;
   margin: 0.25rem 0;
+
+  color: var(--default-font-color);
 
   
  /* display: flex; */
@@ -308,5 +323,33 @@ a {
   .container__personal__urls svg {
     width: 26px;
     height: 26px;
+  }
+}
+
+@-webkit-keyframes shake {
+  0% {
+    transform: translateX(-5px) rotate(-2.5deg);
+  }
+
+  50% {
+    transform: translateX(5px) rotate(2.5deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-5px) rotate(-2.5deg);
+  }
+
+  50% {
+    transform: translateX(5px) rotate(2.5deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
   }
 }
