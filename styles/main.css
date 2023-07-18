@@ -45,6 +45,19 @@ a {
   text-decoration: none;
 }
 
+#light__dark__mode__toggle {
+  min-width: 50px;
+  min-height: 25px;
+  border-radius: 10px;
+  background: none;
+  border: 2px solid var(--default-font-color);
+  padding: 8px;
+  
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
 #dev__name, #dev__tagline {
   margin-bottom: 1.5rem;
 }
