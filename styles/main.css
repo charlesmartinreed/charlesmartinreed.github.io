@@ -14,6 +14,7 @@ https://www.joshwcomeau.com/css/designing-shadows/
   /* --color-near-black: rgba(11, 11, 11, 0.3); */
   --transition-standard: all 0.25s linear;
   --default-font-color: rgb(219, 219, 219);
+  --url-font-color: rgb(219, 219, 219);
   --default-page-background-color: rgb(34, 34, 34);
   --link-color-visited: rgb(99, 26, 38);
   --link-color: rgb(80, 33, 41);
@@ -46,16 +47,28 @@ a {
 }
 
 #light__dark__mode__toggle {
+  cursor: pointer;
+  
   min-width: 50px;
   min-height: 25px;
   border-radius: 10px;
   background: none;
-  border: 2px solid var(--default-font-color);
+  border: 1px solid var(--default-font-color);
   padding: 8px;
   
   position: absolute;
   top: 20px;
   right: 40px;
+
+  box-shadow: var(--icon-box-shadow);
+}
+
+#dark__model__label__dark, #dark__model__label__light {
+  font-weight: 300;
+}
+
+#dark__mode__label__dark.on, #dark__mode__label__light.on {
+  font-weight: 900;
 }
 
 #dev__name, #dev__tagline {
@@ -252,7 +265,7 @@ a {
 }
 
 .url__button {
-  color: var(--default-font-color);
+  color: var(--url-font-color);
   background-color: var(--link-color);
   border-radius: 4px;
   padding: 0.5rem 1rem;
