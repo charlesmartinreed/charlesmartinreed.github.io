@@ -265,18 +265,18 @@ a {
   line-height: 1.25rem;
 }
 
-.project__details .project__details__icon__container {
+.project__details__icon__container {
   width: 100%;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
 
-.project__details .project__details__icon__container .project__lang__icon {
-  width: 1.875rem;
-  height: 1.875rem;
+.project__details__icon__container .project__lang__icon {
+  width: 1.575rem;
+  height: 1.575rem;
 }
 
 .project__links {
