@@ -1,4 +1,5 @@
-# Projects I've completed this year that are worth showing off...
-(None... yet)
+### Projects I've completed this year that feel me with a certain sense of pride
+- (None... yet)
 
-Questions? Concerns? [Hit me up!](mailto:charliesoandso@protonmail.com)
+### Other places you can find me
+- [✉️](mailto:charliesoandso@protonmail.com)
