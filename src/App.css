@@ -2,7 +2,24 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
+}
+
+.standout-text {
+  font-weight: 900;
+  font-size: 1.25em;
+}
+
+.standout-link {
+  border-bottom: 2px solid rgba(119, 74, 155, 1);
+}
+
+.standout-code {
+  background-color: rgba(24, 24, 24, 0.95);
+  color: rgba(218, 165, 32, 1);
+  padding: 6px;
+  border-radius: 3px;
+  /* font-family: monospace; */
 }
 
 .logo {
@@ -11,6 +28,7 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
