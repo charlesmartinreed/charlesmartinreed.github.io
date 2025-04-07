@@ -5,6 +5,22 @@
   text-align: left;
 }
 
+nav {
+  display: flex;
+  /* flex-direction: row; */
+  min-width: 100%;
+  /* background-color: red; */
+  justify-content: flex-end;
+}
+
+nav > * {
+  display: block;
+  margin: 0 1.5rem;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
 .standout-text {
   font-weight: 900;
   font-size: 1.25em;
